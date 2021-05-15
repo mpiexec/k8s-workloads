@@ -28,4 +28,19 @@ $ k create ns <ns-name>
 $ k -n <ns-name> create -f <yaml-manifest>
 ```
 
+## Presentation
+
+### Requirements
+
+- Pandoc
+- Beamer
+
+### How to build PDF
+
+```sh
+$ cd present
+$ cat README.md
+$ make.sh
+```
+
 [comment]: # ( vim: set ft=markdown ts=4 sts=4 sw=4 nowrap et: )
