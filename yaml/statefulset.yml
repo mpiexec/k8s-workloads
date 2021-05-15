@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ss
+spec:
+  serviceName: "ss"
+  selector:
+    matchLabels:
+      app: ss 
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ss 
+    spec:
+      containers:
+      - name: db
+        image: redis:alpine

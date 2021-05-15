@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hell
+spec:
+  backoffLimit: 3
+  activeDeadlineSeconds: 30
+  template:
+    spec:
+      containers:
+      - image: busybox
+        name: hell
+        args:
+        - /bin/sh
+        - -c
+        - date; echo Hell world; exit 1
+      restartPolicy: Never
